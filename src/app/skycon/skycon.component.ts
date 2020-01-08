@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SkyconsService } from '../services/skycons.service';
-
+import { SkyconsService } from '@src/app/services/skycons.service';
 
 const daysObject = [1, 2, 3, 4, 5];
 

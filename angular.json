@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "weather-connect"
+  "defaultProject": "weather-connect",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  }
 }

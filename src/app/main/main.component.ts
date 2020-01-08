@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { SkyconsService } from '../services/skycons.service';
-import { ApiService } from '../services/api.service';
+import { SkyconsService } from '@src/app/services/skycons.service';
+import { ApiService } from '@src/app/services/api.service';
 import { compileNgModule } from '@angular/compiler';
-import { Weather } from '../interfaces/weather';
+import { Weather } from '@src/app/interfaces/weather';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -54,6 +54,7 @@ export class MainComponent implements OnInit{
     // get weather from coords
     this.apiService.getWeather(this.finalLat, this.finalLng)
       .subscribe((res) => {
+        console.log(res);
         this.weather = res;
 
         // print darksky api get in console

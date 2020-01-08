@@ -4,13 +4,14 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { PreLoaderComponent } from './pre-loader/pre-loader.component';
-import { DetailedComponent } from './main/detailed/detailed.component';
-import { SkyconComponent } from './skycon/skycon.component';
-import { WeekComponent } from './main/week/week.component';
-import { WeekObjectComponent } from './main/week/week.model';
+import { AppComponent } from '@src/app/app.component';
+import { MainComponent } from '@src/app/main/main.component';
+import { PreLoaderComponent } from '@src/app/pre-loader/pre-loader.component';
+import { DetailedComponent } from '@src/app/main/detailed/detailed.component';
+import { SkyconComponent } from '@src/app/skycon/skycon.component';
+import { WeekComponent } from '@src/app/main/week/week.component';
+import { WeekObjectComponent } from '@src/app/main/week/week.model';
+import { ApiService } from '@src/app/services/api.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WeekObjectComponent } from './main/week/week.model';
     DetailedComponent,
     SkyconComponent,
     WeekComponent,
-    WeekObjectComponent
+    WeekObjectComponent,
+    ApiService
   ],
   imports: [
     BrowserModule,

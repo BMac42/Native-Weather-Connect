@@ -1,0 +1,11 @@
+<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
+<!-- <Label text="main view works"></Label> -->
+<StackLayout>
+<page-router-outlet></page-router-outlet>
+<app-main *ngIf='lat'
+  [finalLat]='lat'
+  [finalLng]='lng'
+  [city]='formattedCity'
+  >
+  </app-main>
+</StackLayout>

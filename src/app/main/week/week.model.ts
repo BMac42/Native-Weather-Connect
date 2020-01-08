@@ -1,5 +1,5 @@
 import { Input, Component, OnInit } from '@angular/core';
-import { SkyconsService } from 'src/app/services/skycons.service';
+import { SkyconsService } from '@src/app/services/skycons.service';
 
 @Component({
   selector: 'app-week-model',

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, NgModule, DoCheck, Input } from '@angular/core';
-import { ApiService } from './services/api.service';
-import { Weather } from './interfaces/weather';
+import { ApiService } from '@src/app/services/api.service';
+import { Weather } from '@src/app/interfaces/weather';
 
 @Component({
   selector: 'app-root',
@@ -21,17 +21,21 @@ export class AppComponent {
 
   constructor(private apiService: ApiService) { }
 
+  // tslint:disable-next-line: use-life-cycle-interface
   ngOnInit() {
+    console.log('init test here');
     /* grab coordinates from users location */
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => this.posit = position);
     }
   }
 
+  // tslint:disable-next-line: use-life-cycle-interface
   ngDoCheck() {
     /* if coords are pulled */
     if (this.posit) {
       this.getLocationInfo(this.posit);
+      console.log('coords check true log');
     }
   }
 
